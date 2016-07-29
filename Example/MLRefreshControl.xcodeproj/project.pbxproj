@@ -1,0 +1,603 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23F07342FC77008300BF3F00 /* libPods-MLRefreshControl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBFE3B2599CA76EFF6D00C0A /* libPods-MLRefreshControl.a */; };
+		36E4CB051D388EF50009CC65 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E4CB041D388EF50009CC65 /* main.m */; };
+		36E4CB081D388EF50009CC65 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E4CB071D388EF50009CC65 /* AppDelegate.m */; };
+		36E4CB0B1D388EF50009CC65 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E4CB0A1D388EF50009CC65 /* ViewController.m */; };
+		36E4CB0E1D388EF50009CC65 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E4CB0C1D388EF50009CC65 /* Main.storyboard */; };
+		36E4CB101D388EF50009CC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E4CB0F1D388EF50009CC65 /* Assets.xcassets */; };
+		36E4CB131D388EF50009CC65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E4CB111D388EF50009CC65 /* LaunchScreen.storyboard */; };
+		36E4CB1E1D388EF50009CC65 /* MLRefreshControlTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E4CB1D1D388EF50009CC65 /* MLRefreshControlTests.m */; };
+		36E4CB291D388EF50009CC65 /* MLRefreshControlUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E4CB281D388EF50009CC65 /* MLRefreshControlUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36E4CB1A1D388EF50009CC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36E4CAF81D388EF50009CC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36E4CAFF1D388EF50009CC65;
+			remoteInfo = MLRefreshControl;
+		};
+		36E4CB251D388EF50009CC65 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36E4CAF81D388EF50009CC65 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36E4CAFF1D388EF50009CC65;
+			remoteInfo = MLRefreshControl;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18742F622365F37C04D26F73 /* Pods-MLRefreshControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLRefreshControl.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MLRefreshControl/Pods-MLRefreshControl.debug.xcconfig"; sourceTree = "<group>"; };
+		36E4CB001D388EF50009CC65 /* MLRefreshControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLRefreshControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E4CB041D388EF50009CC65 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36E4CB061D388EF50009CC65 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36E4CB071D388EF50009CC65 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36E4CB091D388EF50009CC65 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		36E4CB0A1D388EF50009CC65 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36E4CB0D1D388EF50009CC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		36E4CB0F1D388EF50009CC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36E4CB121D388EF50009CC65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		36E4CB141D388EF50009CC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E4CB191D388EF50009CC65 /* MLRefreshControlTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLRefreshControlTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E4CB1D1D388EF50009CC65 /* MLRefreshControlTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLRefreshControlTests.m; sourceTree = "<group>"; };
+		36E4CB1F1D388EF50009CC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E4CB241D388EF50009CC65 /* MLRefreshControlUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLRefreshControlUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E4CB281D388EF50009CC65 /* MLRefreshControlUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MLRefreshControlUITests.m; sourceTree = "<group>"; };
+		36E4CB2A1D388EF50009CC65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBFE3B2599CA76EFF6D00C0A /* libPods-MLRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLRefreshControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F342374452A9260E9346D83C /* Pods-MLRefreshControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLRefreshControl.release.xcconfig"; path = "Pods/Target Support Files/Pods-MLRefreshControl/Pods-MLRefreshControl.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36E4CAFD1D388EF50009CC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23F07342FC77008300BF3F00 /* libPods-MLRefreshControl.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E4CB161D388EF50009CC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E4CB211D388EF50009CC65 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36E4CAF71D388EF50009CC65 = {
+			isa = PBXGroup;
+			children = (
+				36E4CB021D388EF50009CC65 /* MLRefreshControl */,
+				36E4CB1C1D388EF50009CC65 /* MLRefreshControlTests */,
+				36E4CB271D388EF50009CC65 /* MLRefreshControlUITests */,
+				36E4CB011D388EF50009CC65 /* Products */,
+				8B2B70BA48F6019FF42BF72A /* Pods */,
+				C95FF5A9A7A973BBAAD20B6E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		36E4CB011D388EF50009CC65 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36E4CB001D388EF50009CC65 /* MLRefreshControl.app */,
+				36E4CB191D388EF50009CC65 /* MLRefreshControlTests.xctest */,
+				36E4CB241D388EF50009CC65 /* MLRefreshControlUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36E4CB021D388EF50009CC65 /* MLRefreshControl */ = {
+			isa = PBXGroup;
+			children = (
+				36E4CB061D388EF50009CC65 /* AppDelegate.h */,
+				36E4CB071D388EF50009CC65 /* AppDelegate.m */,
+				36E4CB091D388EF50009CC65 /* ViewController.h */,
+				36E4CB0A1D388EF50009CC65 /* ViewController.m */,
+				36E4CB0C1D388EF50009CC65 /* Main.storyboard */,
+				36E4CB0F1D388EF50009CC65 /* Assets.xcassets */,
+				36E4CB111D388EF50009CC65 /* LaunchScreen.storyboard */,
+				36E4CB141D388EF50009CC65 /* Info.plist */,
+				36E4CB031D388EF50009CC65 /* Supporting Files */,
+			);
+			path = MLRefreshControl;
+			sourceTree = "<group>";
+		};
+		36E4CB031D388EF50009CC65 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				36E4CB041D388EF50009CC65 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		36E4CB1C1D388EF50009CC65 /* MLRefreshControlTests */ = {
+			isa = PBXGroup;
+			children = (
+				36E4CB1D1D388EF50009CC65 /* MLRefreshControlTests.m */,
+				36E4CB1F1D388EF50009CC65 /* Info.plist */,
+			);
+			path = MLRefreshControlTests;
+			sourceTree = "<group>";
+		};
+		36E4CB271D388EF50009CC65 /* MLRefreshControlUITests */ = {
+			isa = PBXGroup;
+			children = (
+				36E4CB281D388EF50009CC65 /* MLRefreshControlUITests.m */,
+				36E4CB2A1D388EF50009CC65 /* Info.plist */,
+			);
+			path = MLRefreshControlUITests;
+			sourceTree = "<group>";
+		};
+		8B2B70BA48F6019FF42BF72A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18742F622365F37C04D26F73 /* Pods-MLRefreshControl.debug.xcconfig */,
+				F342374452A9260E9346D83C /* Pods-MLRefreshControl.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C95FF5A9A7A973BBAAD20B6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBFE3B2599CA76EFF6D00C0A /* libPods-MLRefreshControl.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36E4CAFF1D388EF50009CC65 /* MLRefreshControl */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E4CB2D1D388EF50009CC65 /* Build configuration list for PBXNativeTarget "MLRefreshControl" */;
+			buildPhases = (
+				B9493F3006F5D41F1E08C73E /* [CP] Check Pods Manifest.lock */,
+				36E4CAFC1D388EF50009CC65 /* Sources */,
+				36E4CAFD1D388EF50009CC65 /* Frameworks */,
+				36E4CAFE1D388EF50009CC65 /* Resources */,
+				2991E6A1FDF358C40B14AAD4 /* [CP] Embed Pods Frameworks */,
+				B51156DACCABC4E6D5C6B117 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MLRefreshControl;
+			productName = MLRefreshControl;
+			productReference = 36E4CB001D388EF50009CC65 /* MLRefreshControl.app */;
+			productType = "com.apple.product-type.application";
+		};
+		36E4CB181D388EF50009CC65 /* MLRefreshControlTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E4CB301D388EF50009CC65 /* Build configuration list for PBXNativeTarget "MLRefreshControlTests" */;
+			buildPhases = (
+				36E4CB151D388EF50009CC65 /* Sources */,
+				36E4CB161D388EF50009CC65 /* Frameworks */,
+				36E4CB171D388EF50009CC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36E4CB1B1D388EF50009CC65 /* PBXTargetDependency */,
+			);
+			name = MLRefreshControlTests;
+			productName = MLRefreshControlTests;
+			productReference = 36E4CB191D388EF50009CC65 /* MLRefreshControlTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		36E4CB231D388EF50009CC65 /* MLRefreshControlUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E4CB331D388EF50009CC65 /* Build configuration list for PBXNativeTarget "MLRefreshControlUITests" */;
+			buildPhases = (
+				36E4CB201D388EF50009CC65 /* Sources */,
+				36E4CB211D388EF50009CC65 /* Frameworks */,
+				36E4CB221D388EF50009CC65 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				36E4CB261D388EF50009CC65 /* PBXTargetDependency */,
+			);
+			name = MLRefreshControlUITests;
+			productName = MLRefreshControlUITests;
+			productReference = 36E4CB241D388EF50009CC65 /* MLRefreshControlUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36E4CAF81D388EF50009CC65 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = molon;
+				TargetAttributes = {
+					36E4CAFF1D388EF50009CC65 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					36E4CB181D388EF50009CC65 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 36E4CAFF1D388EF50009CC65;
+					};
+					36E4CB231D388EF50009CC65 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 36E4CAFF1D388EF50009CC65;
+					};
+				};
+			};
+			buildConfigurationList = 36E4CAFB1D388EF50009CC65 /* Build configuration list for PBXProject "MLRefreshControl" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36E4CAF71D388EF50009CC65;
+			productRefGroup = 36E4CB011D388EF50009CC65 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36E4CAFF1D388EF50009CC65 /* MLRefreshControl */,
+				36E4CB181D388EF50009CC65 /* MLRefreshControlTests */,
+				36E4CB231D388EF50009CC65 /* MLRefreshControlUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36E4CAFE1D388EF50009CC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E4CB131D388EF50009CC65 /* LaunchScreen.storyboard in Resources */,
+				36E4CB101D388EF50009CC65 /* Assets.xcassets in Resources */,
+				36E4CB0E1D388EF50009CC65 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E4CB171D388EF50009CC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E4CB221D388EF50009CC65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2991E6A1FDF358C40B14AAD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLRefreshControl/Pods-MLRefreshControl-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B51156DACCABC4E6D5C6B117 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MLRefreshControl/Pods-MLRefreshControl-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9493F3006F5D41F1E08C73E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36E4CAFC1D388EF50009CC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E4CB0B1D388EF50009CC65 /* ViewController.m in Sources */,
+				36E4CB081D388EF50009CC65 /* AppDelegate.m in Sources */,
+				36E4CB051D388EF50009CC65 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E4CB151D388EF50009CC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E4CB1E1D388EF50009CC65 /* MLRefreshControlTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		36E4CB201D388EF50009CC65 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E4CB291D388EF50009CC65 /* MLRefreshControlUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		36E4CB1B1D388EF50009CC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36E4CAFF1D388EF50009CC65 /* MLRefreshControl */;
+			targetProxy = 36E4CB1A1D388EF50009CC65 /* PBXContainerItemProxy */;
+		};
+		36E4CB261D388EF50009CC65 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36E4CAFF1D388EF50009CC65 /* MLRefreshControl */;
+			targetProxy = 36E4CB251D388EF50009CC65 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		36E4CB0C1D388EF50009CC65 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E4CB0D1D388EF50009CC65 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		36E4CB111D388EF50009CC65 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E4CB121D388EF50009CC65 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36E4CB2B1D388EF50009CC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		36E4CB2C1D388EF50009CC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		36E4CB2E1D388EF50009CC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18742F622365F37C04D26F73 /* Pods-MLRefreshControl.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MLRefreshControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molon.MLRefreshControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		36E4CB2F1D388EF50009CC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F342374452A9260E9346D83C /* Pods-MLRefreshControl.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MLRefreshControl/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molon.MLRefreshControl;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		36E4CB311D388EF50009CC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MLRefreshControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molon.MLRefreshControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLRefreshControl.app/MLRefreshControl";
+			};
+			name = Debug;
+		};
+		36E4CB321D388EF50009CC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MLRefreshControlTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molon.MLRefreshControlTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MLRefreshControl.app/MLRefreshControl";
+			};
+			name = Release;
+		};
+		36E4CB341D388EF50009CC65 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MLRefreshControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molon.MLRefreshControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MLRefreshControl;
+			};
+			name = Debug;
+		};
+		36E4CB351D388EF50009CC65 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MLRefreshControlUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.molon.MLRefreshControlUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MLRefreshControl;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36E4CAFB1D388EF50009CC65 /* Build configuration list for PBXProject "MLRefreshControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E4CB2B1D388EF50009CC65 /* Debug */,
+				36E4CB2C1D388EF50009CC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E4CB2D1D388EF50009CC65 /* Build configuration list for PBXNativeTarget "MLRefreshControl" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E4CB2E1D388EF50009CC65 /* Debug */,
+				36E4CB2F1D388EF50009CC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E4CB301D388EF50009CC65 /* Build configuration list for PBXNativeTarget "MLRefreshControlTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E4CB311D388EF50009CC65 /* Debug */,
+				36E4CB321D388EF50009CC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E4CB331D388EF50009CC65 /* Build configuration list for PBXNativeTarget "MLRefreshControlUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E4CB341D388EF50009CC65 /* Debug */,
+				36E4CB351D388EF50009CC65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36E4CAF81D388EF50009CC65 /* Project object */;
+}

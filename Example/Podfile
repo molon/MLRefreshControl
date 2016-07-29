@@ -1,0 +1,11 @@
+source 'https://github.com/CocoaPods/Specs.git'
+
+platform :ios, '7.0'
+
+workspace 'MLRefreshControl.xcworkspace'
+
+target 'MLRefreshControl' do
+	project 'MLRefreshControl.xcodeproj'
+	
+	pod 'MLRefreshControl', :path => '../MLRefreshControl.podspec'
+end
