@@ -22,7 +22,7 @@
 #pragma mark - event
 - (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
 {
-    [self enableRefreshingWithAction:actionBlock style:style scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing animteView:nil];
+    [self enableRefreshingWithAction:actionBlock style:style scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing animteView:[CircleMLRefreshControlAnimateView new]];
 }
 
 - (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing animteView:(MLRefreshControlAnimateView*)animateView
