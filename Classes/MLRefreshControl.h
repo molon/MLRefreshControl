@@ -7,7 +7,7 @@
 
 #pragma once
 
-#import "MLRefreshControlConstants.h"
+#import "MLRefreshControlTypes.h"
 #import "UIScrollView+MLRefreshControl.h"
 #import "MLRefreshControlView.h"
 #import "MLRefreshControlAnimateView.h"

@@ -1,6 +1,6 @@
 {
   "name": "MLRefreshControl",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "Pull down to refresh",
   "homepage": "https://github.com/molon/MLRefreshControl",
   "license": {
@@ -11,7 +11,7 @@
   },
   "source": {
     "git": "https://github.com/molon/MLRefreshControl.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "7.0"

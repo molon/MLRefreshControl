@@ -22,17 +22,17 @@
 
 @property (nonatomic, assign) MLRefreshControlState state;
 
-/**
- Sometimes we need to ignore the kvo for contentOffset temporarily.
- Because some behavior will affect contentOffset(Like changing contentInset)
- */
-@property (nonatomic, assign) BOOL ignoreSetContentOffsetForKVO;
-
-@property (nonatomic, weak) UIPanGestureRecognizer *scrollViewPanGesture;
-
 @end
 
-@implementation MLRefreshControlView
+@implementation MLRefreshControlView {
+    /**
+     Sometimes we need to ignore the kvo for contentOffset temporarily.
+     Because some behavior will affect contentOffset(Like changing contentInset)
+     */
+    BOOL _ignoreSetContentOffsetForKVO;
+    
+    __weak UIPanGestureRecognizer *_scrollViewPanGesture;
+}
 
 - (id)initWithScrollView:(UIScrollView *)scrollView action:(MLRefreshControlActionBlock)actionBlock animateView:(MLRefreshControlAnimateView*)animateView style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
 {
@@ -69,11 +69,11 @@
 #pragma mark - helper
 - (void)changeScrollViewContentInsetTop:(CGFloat)insetTop
 {
-    self.ignoreSetContentOffsetForKVO = YES;
+    _ignoreSetContentOffsetForKVO = YES;
     UIEdgeInsets inset = self.scrollView.contentInset;
     inset.top = insetTop;
     self.scrollView.contentInset = inset;
-    self.ignoreSetContentOffsetForKVO = NO;
+    _ignoreSetContentOffsetForKVO = NO;
 }
 
 #pragma mark - setter
@@ -107,9 +107,9 @@
     self.animateView.state = state;
     
     void (^scrollTopTopBlock)() = ^{
-        self.ignoreSetContentOffsetForKVO = YES;
+        _ignoreSetContentOffsetForKVO = YES;
         [self.scrollView setContentOffset:CGPointMake(self.scrollView.contentOffset.x, -self.scrollView.contentInset.top) animated:NO];
-        self.ignoreSetContentOffsetForKVO = NO;
+        _ignoreSetContentOffsetForKVO = NO;
     };
     
     switch (state) {
@@ -174,12 +174,12 @@
     
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         //remove kvo
-        [self.scrollViewPanGesture removeObserver:self forKeyPath:@"state" context:nil];
+        [_scrollViewPanGesture removeObserver:self forKeyPath:@"state" context:nil];
         [self.superview removeObserver:self forKeyPath:@"contentOffset" context:nil];
         [self.superview removeObserver:self forKeyPath:@"frame" context:nil];
         
         self.scrollView = nil;
-        self.scrollViewPanGesture = nil;
+        _scrollViewPanGesture = nil;
     }
 }
 
@@ -191,13 +191,13 @@
     
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         self.scrollView = (UIScrollView*)(self.superview);
-        self.scrollViewPanGesture = [self.scrollView valueForKey:@"pan"];
+        _scrollViewPanGesture = [self.scrollView valueForKey:@"pan"];
         
         //add kvo for contentOffset
         [self.superview addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
         [self.superview addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
         
-        [self.scrollViewPanGesture addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
+        [_scrollViewPanGesture addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
     }
 }
 
@@ -214,7 +214,7 @@
                 [self layoutIfNeeded];
             }
             
-            if (self.ignoreSetContentOffsetForKVO){
+            if (_ignoreSetContentOffsetForKVO){
                 return;
             }
             
@@ -251,7 +251,7 @@
         return;
     }
     
-    if ([object isEqual:self.scrollViewPanGesture]&&[@"state" isEqualToString:keyPath]) {
+    if ([object isEqual:_scrollViewPanGesture]&&[@"state" isEqualToString:keyPath]) {
         //check whether stopping drag
         UIGestureRecognizerState new = [[change objectForKey:NSKeyValueChangeNewKey]integerValue];
         if (new==UIGestureRecognizerStateEnded||new==UIGestureRecognizerStateCancelled||new==UIGestureRecognizerStateFailed) {

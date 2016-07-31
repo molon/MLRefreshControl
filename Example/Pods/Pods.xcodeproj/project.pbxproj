@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DFC4E59A385A91826350249FD4069FD /* CircleMLRefreshControlAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9E381D8A7447643C91ADF545E9289F /* CircleMLRefreshControlAnimateView.m */; };
-		0F56B2FBC75A5BBE1BFBA3EBA03D08CC /* MLRefreshControlView.h in Headers */ = {isa = PBXBuildFile; fileRef = 6689058B9D33784EDF78AB48AE31CBAB /* MLRefreshControlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2B2B91C1AAF02D3501141E5538F31A8B /* MLRefreshControlAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EA2DDD909D9F3DF6509E442CB91E6F3 /* MLRefreshControlAnimateView.m */; };
+		0DFC4E59A385A91826350249FD4069FD /* CircleMLRefreshControlAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DB9CB60FA32652878C5C4C9EF20A720 /* CircleMLRefreshControlAnimateView.m */; };
+		2B2B91C1AAF02D3501141E5538F31A8B /* MLRefreshControlAnimateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 838D3E64C55FA66A9356CB7A6684F80F /* MLRefreshControlAnimateView.m */; };
+		310BA741B923AF3EFD0E314F4C1694F3 /* CircleMLRefreshControlAnimateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B78820263D591566C96852216A76A3B /* CircleMLRefreshControlAnimateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5EA069917BA98D84C0E3A94A862DBD9C /* MLRefreshControlTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 39FE513AD4DC65D338A9768B4E42C790 /* MLRefreshControlTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65EC7EEA72DE97EECEFE6D874D2BA469 /* Pods-MLRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F0A8BA15232766A5FAB73ED67498F1 /* Pods-MLRefreshControl-dummy.m */; };
 		6CE886F1785F045EDD5006006252BB25 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		74EEA77111E3833D5628811CB268BB80 /* MLRefreshControlConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BF19904F98F0D333CAB673A0F675CDE /* MLRefreshControlConstants.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8352CE069A872353DAC725D83550B105 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		843A20F9D8CE1135344A624A0B5DF793 /* MLRefreshControlAnimateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 97BFBC02C5E17ADA1503F6299B257A4A /* MLRefreshControlAnimateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9F9047DBB1D3B8F296EF03FBA7147170 /* CircleMLRefreshControlAnimateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 11227D3C7997EEA6C8965D3683119A1E /* CircleMLRefreshControlAnimateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A19B3D30054F3647BED98724695BED27 /* UIScrollView+MLRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DD14C0A4146082B2A1F634461580C59 /* UIScrollView+MLRefreshControl.m */; };
+		A19B3D30054F3647BED98724695BED27 /* UIScrollView+MLRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0EA3A90F525B1F34A31AEAD9269D5EAA /* UIScrollView+MLRefreshControl.m */; };
 		A51838D7BE3090C7D0407315FDDFD85D /* MLRefreshControl-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C4655B4B4F796CB17891C7CB6F64CE3B /* MLRefreshControl-dummy.m */; };
-		B2B7BEFF726025B5B2DF016F43D3BD95 /* MLRefreshControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = E1A87C763F4357E5EA9A97CBA8CC1CDE /* MLRefreshControlView.m */; };
-		D25B289628A15E849E135EFFC1A5C30D /* MLRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FAA62EC0D56FEBEF75481B8DF498C84 /* MLRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FA01C46FD538FB0862248B307CE71738 /* UIScrollView+MLRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D268C0C2A8B5C2D4D2B5E1642BB330C3 /* UIScrollView+MLRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD1DDB22D2C2B7578A95685FC45306D0 /* UIScrollView+MLRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = A2FC462395A4916168BBAB080532E635 /* UIScrollView+MLRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2B7BEFF726025B5B2DF016F43D3BD95 /* MLRefreshControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5FEC4B23BE56F17D705E9AA5713E7A74 /* MLRefreshControlView.m */; };
+		B7E2C34F781B0C1A69CD121AEA847841 /* MLRefreshControlAnimateView.h in Headers */ = {isa = PBXBuildFile; fileRef = 91CEBB7ADCBDCD47FEA2DDB8B633F4BD /* MLRefreshControlAnimateView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C5A2614256D01260B0D8490032FF7994 /* MLRefreshControlView.h in Headers */ = {isa = PBXBuildFile; fileRef = CF9D7DCD4E398BA0F535E0EBD556F754 /* MLRefreshControlView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E5E5AABE94D861E160FA9A246518D910 /* MLRefreshControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4695F96C3C36824B8A20569585737204 /* MLRefreshControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,30 +34,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		11227D3C7997EEA6C8965D3683119A1E /* CircleMLRefreshControlAnimateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CircleMLRefreshControlAnimateView.h; sourceTree = "<group>"; };
+		0EA3A90F525B1F34A31AEAD9269D5EAA /* UIScrollView+MLRefreshControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MLRefreshControl.m"; sourceTree = "<group>"; };
 		14290B073FA474A1E07A15DE9E859AE6 /* MLRefreshControl-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MLRefreshControl-prefix.pch"; sourceTree = "<group>"; };
+		2B78820263D591566C96852216A76A3B /* CircleMLRefreshControlAnimateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = CircleMLRefreshControlAnimateView.h; sourceTree = "<group>"; };
 		2EFDC367760A83CAB085F321F92117D0 /* Pods-MLRefreshControl.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MLRefreshControl.debug.xcconfig"; sourceTree = "<group>"; };
-		2FAA62EC0D56FEBEF75481B8DF498C84 /* MLRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControl.h; sourceTree = "<group>"; };
+		39FE513AD4DC65D338A9768B4E42C790 /* MLRefreshControlTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControlTypes.h; sourceTree = "<group>"; };
 		450E19444F7B9D1281A7269ED70A299E /* Pods-MLRefreshControl-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MLRefreshControl-resources.sh"; sourceTree = "<group>"; };
-		4BF19904F98F0D333CAB673A0F675CDE /* MLRefreshControlConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControlConstants.h; sourceTree = "<group>"; };
-		5EA2DDD909D9F3DF6509E442CB91E6F3 /* MLRefreshControlAnimateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MLRefreshControlAnimateView.m; sourceTree = "<group>"; };
+		4695F96C3C36824B8A20569585737204 /* MLRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControl.h; sourceTree = "<group>"; };
+		5FEC4B23BE56F17D705E9AA5713E7A74 /* MLRefreshControlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MLRefreshControlView.m; sourceTree = "<group>"; };
 		658E3B28FF25957C1E2BA8740E5DBDD2 /* Pods-MLRefreshControl-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-MLRefreshControl-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6689058B9D33784EDF78AB48AE31CBAB /* MLRefreshControlView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControlView.h; sourceTree = "<group>"; };
-		6DD14C0A4146082B2A1F634461580C59 /* UIScrollView+MLRefreshControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+MLRefreshControl.m"; sourceTree = "<group>"; };
+		7DB9CB60FA32652878C5C4C9EF20A720 /* CircleMLRefreshControlAnimateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CircleMLRefreshControlAnimateView.m; sourceTree = "<group>"; };
+		838D3E64C55FA66A9356CB7A6684F80F /* MLRefreshControlAnimateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MLRefreshControlAnimateView.m; sourceTree = "<group>"; };
 		87EDF74DB16C1723868AF9CC863E4CB3 /* libMLRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMLRefreshControl.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		91CEBB7ADCBDCD47FEA2DDB8B633F4BD /* MLRefreshControlAnimateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControlAnimateView.h; sourceTree = "<group>"; };
 		9385E68102F9B5E1BC6EC786B98127D6 /* Pods-MLRefreshControl-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-MLRefreshControl-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		97BFBC02C5E17ADA1503F6299B257A4A /* MLRefreshControlAnimateView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControlAnimateView.h; sourceTree = "<group>"; };
+		A2FC462395A4916168BBAB080532E635 /* UIScrollView+MLRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MLRefreshControl.h"; sourceTree = "<group>"; };
 		C4655B4B4F796CB17891C7CB6F64CE3B /* MLRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MLRefreshControl-dummy.m"; sourceTree = "<group>"; };
 		C85939B0E90FC4DB88EA53F73FAF21B1 /* Pods-MLRefreshControl.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-MLRefreshControl.release.xcconfig"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		D268C0C2A8B5C2D4D2B5E1642BB330C3 /* UIScrollView+MLRefreshControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+MLRefreshControl.h"; sourceTree = "<group>"; };
+		CF9D7DCD4E398BA0F535E0EBD556F754 /* MLRefreshControlView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MLRefreshControlView.h; sourceTree = "<group>"; };
 		D767FDCA228308101CCE4D8F490DFE14 /* Pods-MLRefreshControl-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-MLRefreshControl-frameworks.sh"; sourceTree = "<group>"; };
 		E0D04BA19D900CD4FA0BD18393FBDD85 /* libPods-MLRefreshControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MLRefreshControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E1A87C763F4357E5EA9A97CBA8CC1CDE /* MLRefreshControlView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MLRefreshControlView.m; sourceTree = "<group>"; };
 		E9F0A8BA15232766A5FAB73ED67498F1 /* Pods-MLRefreshControl-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-MLRefreshControl-dummy.m"; sourceTree = "<group>"; };
 		EF99C512928716897AED23443F0EA682 /* MLRefreshControl.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MLRefreshControl.xcconfig; sourceTree = "<group>"; };
-		FE9E381D8A7447643C91ADF545E9289F /* CircleMLRefreshControlAnimateView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = CircleMLRefreshControlAnimateView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +83,7 @@
 		0E3CF536DCC5112CAE9CB57AA2517B1F /* MLRefreshControl */ = {
 			isa = PBXGroup;
 			children = (
-				579A196E840CA29CC3753C36AF9D8D5D /* Classes */,
+				E785F372307157AEDFA0C0A230796B77 /* Classes */,
 				1207986BB5BB65A91EA040086C5878E7 /* Support Files */,
 			);
 			name = MLRefreshControl;
@@ -101,37 +101,12 @@
 			path = "Example/Pods/Target Support Files/MLRefreshControl";
 			sourceTree = "<group>";
 		};
-		208043AB8414ED2C1F1AEA66B85BBF1E /* AnimateViews */ = {
-			isa = PBXGroup;
-			children = (
-				11227D3C7997EEA6C8965D3683119A1E /* CircleMLRefreshControlAnimateView.h */,
-				FE9E381D8A7447643C91ADF545E9289F /* CircleMLRefreshControlAnimateView.m */,
-			);
-			path = AnimateViews;
-			sourceTree = "<group>";
-		};
 		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		579A196E840CA29CC3753C36AF9D8D5D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				2FAA62EC0D56FEBEF75481B8DF498C84 /* MLRefreshControl.h */,
-				97BFBC02C5E17ADA1503F6299B257A4A /* MLRefreshControlAnimateView.h */,
-				5EA2DDD909D9F3DF6509E442CB91E6F3 /* MLRefreshControlAnimateView.m */,
-				4BF19904F98F0D333CAB673A0F675CDE /* MLRefreshControlConstants.h */,
-				6689058B9D33784EDF78AB48AE31CBAB /* MLRefreshControlView.h */,
-				E1A87C763F4357E5EA9A97CBA8CC1CDE /* MLRefreshControlView.m */,
-				D268C0C2A8B5C2D4D2B5E1642BB330C3 /* UIScrollView+MLRefreshControl.h */,
-				6DD14C0A4146082B2A1F634461580C59 /* UIScrollView+MLRefreshControl.m */,
-				208043AB8414ED2C1F1AEA66B85BBF1E /* AnimateViews */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		6B5115EB8C78AB5D8C7BE454BC6F8B09 /* Pods-MLRefreshControl */ = {
@@ -155,6 +130,15 @@
 				6B5115EB8C78AB5D8C7BE454BC6F8B09 /* Pods-MLRefreshControl */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		73BA95DEC6AB2C489637B511016B2939 /* AnimateViews */ = {
+			isa = PBXGroup;
+			children = (
+				2B78820263D591566C96852216A76A3B /* CircleMLRefreshControlAnimateView.h */,
+				7DB9CB60FA32652878C5C4C9EF20A720 /* CircleMLRefreshControlAnimateView.m */,
+			);
+			path = AnimateViews;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -184,6 +168,22 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		E785F372307157AEDFA0C0A230796B77 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				4695F96C3C36824B8A20569585737204 /* MLRefreshControl.h */,
+				91CEBB7ADCBDCD47FEA2DDB8B633F4BD /* MLRefreshControlAnimateView.h */,
+				838D3E64C55FA66A9356CB7A6684F80F /* MLRefreshControlAnimateView.m */,
+				39FE513AD4DC65D338A9768B4E42C790 /* MLRefreshControlTypes.h */,
+				CF9D7DCD4E398BA0F535E0EBD556F754 /* MLRefreshControlView.h */,
+				5FEC4B23BE56F17D705E9AA5713E7A74 /* MLRefreshControlView.m */,
+				A2FC462395A4916168BBAB080532E635 /* UIScrollView+MLRefreshControl.h */,
+				0EA3A90F525B1F34A31AEAD9269D5EAA /* UIScrollView+MLRefreshControl.m */,
+				73BA95DEC6AB2C489637B511016B2939 /* AnimateViews */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		ED6AD9BA10A22B669422A0CEAF9832F0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,16 +196,16 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1AD212BF9DBB395C1FD10C66A26AB8A5 /* Headers */ = {
+		5AE90F9A73D8ACFF523FD1DC02E3C10B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F9047DBB1D3B8F296EF03FBA7147170 /* CircleMLRefreshControlAnimateView.h in Headers */,
-				D25B289628A15E849E135EFFC1A5C30D /* MLRefreshControl.h in Headers */,
-				843A20F9D8CE1135344A624A0B5DF793 /* MLRefreshControlAnimateView.h in Headers */,
-				74EEA77111E3833D5628811CB268BB80 /* MLRefreshControlConstants.h in Headers */,
-				0F56B2FBC75A5BBE1BFBA3EBA03D08CC /* MLRefreshControlView.h in Headers */,
-				FA01C46FD538FB0862248B307CE71738 /* UIScrollView+MLRefreshControl.h in Headers */,
+				310BA741B923AF3EFD0E314F4C1694F3 /* CircleMLRefreshControlAnimateView.h in Headers */,
+				E5E5AABE94D861E160FA9A246518D910 /* MLRefreshControl.h in Headers */,
+				B7E2C34F781B0C1A69CD121AEA847841 /* MLRefreshControlAnimateView.h in Headers */,
+				5EA069917BA98D84C0E3A94A862DBD9C /* MLRefreshControlTypes.h in Headers */,
+				C5A2614256D01260B0D8490032FF7994 /* MLRefreshControlView.h in Headers */,
+				AD1DDB22D2C2B7578A95685FC45306D0 /* UIScrollView+MLRefreshControl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +235,7 @@
 			buildPhases = (
 				9E08FB66EA2EF09D9C409A6A08BB95CD /* Sources */,
 				9840C262B6BA80341CCDF6A8B5E0C48D /* Frameworks */,
-				1AD212BF9DBB395C1FD10C66A26AB8A5 /* Headers */,
+				5AE90F9A73D8ACFF523FD1DC02E3C10B /* Headers */,
 			);
 			buildRules = (
 			);
