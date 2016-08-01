@@ -1,5 +1,5 @@
 PODS:
-  - MLRefreshControl (0.0.2)
+  - MLRefreshControl (0.0.3)
 
 DEPENDENCIES:
   - MLRefreshControl (from `../MLRefreshControl.podspec`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../MLRefreshControl.podspec
 
 SPEC CHECKSUMS:
-  MLRefreshControl: b278eee714dbb59812bbb65f6a7b1de7667760cf
+  MLRefreshControl: 341f2d5d97d051fc2e51dfe5a5a1749ccded76b9
 
 PODFILE CHECKSUM: d2858542b1b102cc3023f9133e8741f8326c5cd3
 
