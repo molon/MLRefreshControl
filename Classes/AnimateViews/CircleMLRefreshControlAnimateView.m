@@ -28,7 +28,7 @@
 - (void)setProgress:(float)progress
 {
     _progress = progress;
-
+    
     [self setNeedsDisplay];
 }
 
@@ -87,18 +87,18 @@
             animation.type = kCATransitionFade;
             [self.circleView.layer addAnimation:animation forKey:nil];
         }
-    }else if (state==MLRefreshControlStateOverstep||state==MLRefreshControlStateRefreshing){
-        if (state==MLRefreshControlStateRefreshing) {
-            CABasicAnimation* rotate =  [CABasicAnimation animationWithKeyPath: @"transform.rotation.z"];
-            rotate.fillMode = kCAFillModeForwards;
-            [rotate setToValue: [NSNumber numberWithFloat:M_PI/2]];
-            rotate.repeatCount = FLT_MAX;
-            rotate.duration = 0.25f;
-            rotate.cumulative = TRUE;
-            rotate.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
-            
-            [_circleView.layer addAnimation:rotate forKey:@"rotateAnimation"];
-        }
+    }else if (state==MLRefreshControlStateRefreshing){
+        self.circleView.progress = 1.0f;
+        
+        CABasicAnimation* rotate =  [CABasicAnimation animationWithKeyPath: @"transform.rotation.z"];
+        rotate.fillMode = kCAFillModeForwards;
+        [rotate setToValue: [NSNumber numberWithFloat:M_PI/2]];
+        rotate.repeatCount = FLT_MAX;
+        rotate.duration = 0.25f;
+        rotate.cumulative = TRUE;
+        rotate.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+        
+        [_circleView.layer addAnimation:rotate forKey:@"rotateAnimation"];
     }
 }
 
