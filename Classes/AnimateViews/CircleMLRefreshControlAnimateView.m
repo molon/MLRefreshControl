@@ -78,6 +78,8 @@
     [super setState:state];
     
     if (state==MLRefreshControlStateNormal) {
+        self.circleView.progress = 0.0f;
+        
         [self.circleView.layer removeAllAnimations];
         
         if (originalState==MLRefreshControlStateRefreshing) {
