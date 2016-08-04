@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) MLRefreshControlState state;
 
 /**
- Current pulling progess
+ Current pulling progess, 0.0f-n
  */
 @property (nonatomic, assign) float pullingProgress;
 

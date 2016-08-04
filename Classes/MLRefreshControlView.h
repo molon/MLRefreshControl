@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Current state
  */
-@property (nonatomic,assign,readonly) MLRefreshControlState state;
+@property (nonatomic, assign, readonly) MLRefreshControlState state;
 
 /**
  The original top of scrollView's contentInset, it will be used to restore the display after refreshing completed.
@@ -39,6 +39,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) MLRefreshControlViewStyle style;
 
 /**
+ action block
+ */
+@property (nonatomic, copy) MLRefreshControlActionBlock actionBlock;
+
+/**
  scrollView
  */
 @property (nonatomic, weak, readonly) UIScrollView *scrollView;
@@ -46,7 +51,6 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Init a refresh control view
  
- @param scrollView                    scrollView
  @param actionBlock                   refreshing action block
  @param animateView                   animateView
  @param originalTopInset              originalTopInset
@@ -54,7 +58,7 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return Refresh control view
  */
-- (id)initWithScrollView:(UIScrollView *)scrollView action:(MLRefreshControlActionBlock)actionBlock animateView:(MLRefreshControlAnimateView*)animateView style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing;
+- (id)initWithAction:(MLRefreshControlActionBlock)actionBlock animateView:(MLRefreshControlAnimateView*)animateView style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing;
 
 /**
  End refreshing, please tell the control manually.

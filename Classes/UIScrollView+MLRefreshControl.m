@@ -31,7 +31,7 @@
         animateView = [CircleMLRefreshControlAnimateView new];
         
     }
-    self.refreshView = [[MLRefreshControlView alloc]initWithScrollView:self action:actionBlock animateView:animateView style:style originalTopInset:self.contentInset.top scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing];
+    self.refreshView = [[MLRefreshControlView alloc]initWithAction:actionBlock animateView:animateView style:style originalTopInset:self.contentInset.top scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing];
 }
 
 - (void)endRefreshing
@@ -72,6 +72,8 @@ static char lastRefreshTimeKey;
 {
     //Remove old
     if (self.refreshView) {
+        NSAssert(![self isRefreshing],@"The old refreshView is refreshing now, it's terrible!");
+        [self endRefreshing];
         [self.refreshView removeFromSuperview];
     }
     
@@ -80,6 +82,11 @@ static char lastRefreshTimeKey;
     [self willChangeValueForKey:key];
     objc_setAssociatedObject(self, &refreshViewKey, refreshView, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self didChangeValueForKey:key];
+    
+    if (refreshView) {
+        [self addSubview:refreshView];
+        [self sendSubviewToBack:refreshView];
+    }
 }
 
 -(NSDate *)lastRefreshTime

@@ -18,8 +18,6 @@
 @interface MLRefreshControlView()
 
 @property (nonatomic, weak) UIScrollView *scrollView;
-@property (nonatomic, copy) MLRefreshControlActionBlock actionBlock;
-
 @property (nonatomic, assign) MLRefreshControlState state;
 
 @end
@@ -34,7 +32,7 @@
     __weak UIPanGestureRecognizer *_scrollViewPanGesture;
 }
 
-- (id)initWithScrollView:(UIScrollView *)scrollView action:(MLRefreshControlActionBlock)actionBlock animateView:(MLRefreshControlAnimateView*)animateView style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
+- (id)initWithAction:(MLRefreshControlActionBlock)actionBlock animateView:(MLRefreshControlAnimateView*)animateView style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
 {
     self = [self init];
     if (self) {
@@ -44,13 +42,6 @@
         
         self.animateView = animateView;
         self.style = style;
-        
-        [scrollView addSubview:self];
-        [scrollView sendSubviewToBack:self];
-        
-        //first layout, the view's frame be always set self according to scrollView.
-        [self setNeedsLayout];
-        [self layoutIfNeeded];
     }
     return self;
 }
@@ -192,6 +183,11 @@
     
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         self.scrollView = (UIScrollView*)(self.superview);
+        
+        //first layout, the view's frame be always set self according to scrollView.
+        [self setNeedsLayout];
+        [self layoutIfNeeded];
+        
         _scrollViewPanGesture = [self.scrollView valueForKey:@"pan"];
         
         //add kvo for contentOffset
@@ -233,20 +229,23 @@
             
             //when scroll up
             CGFloat offsetY = (self.scrollView.contentOffset.y * -1) - self.originalTopInset;
+            if (offsetY<=0) {
+                self.animateView.pullingProgress = 0.0f;
+            }
+            
             if (offsetY<0) {
-                if (self.state==MLRefreshControlStatePulling) { //之前在下拉状态突然变为上拉了就把动画调调
-                    self.animateView.pullingProgress = 0.0f;
-                }
                 return;
             }
             
             if (offsetY==0) {
                 self.state = MLRefreshControlStateNormal;
-            }else if (offsetY <= kMLRefreshControlViewHeight){
-                self.state = MLRefreshControlStatePulling;
-                self.animateView.pullingProgress = offsetY/kMLRefreshControlViewHeight;
             }else{
-                self.state = MLRefreshControlStateOverstep;
+                self.animateView.pullingProgress = offsetY/kMLRefreshControlViewHeight;
+                if (offsetY <= kMLRefreshControlViewHeight){
+                    self.state = MLRefreshControlStatePulling;
+                }else{
+                    self.state = MLRefreshControlStateOverstep;
+                }
             }
         }
         return;

@@ -78,8 +78,6 @@
     [super setState:state];
     
     if (state==MLRefreshControlStateNormal) {
-        self.circleView.progress = 0.0f;
-        
         [self.circleView.layer removeAllAnimations];
         
         if (originalState==MLRefreshControlStateRefreshing) {
@@ -90,8 +88,6 @@
             [self.circleView.layer addAnimation:animation forKey:nil];
         }
     }else if (state==MLRefreshControlStateOverstep||state==MLRefreshControlStateRefreshing){
-        self.circleView.progress = 1.0f;
-        
         if (state==MLRefreshControlStateRefreshing) {
             CABasicAnimation* rotate =  [CABasicAnimation animationWithKeyPath: @"transform.rotation.z"];
             rotate.fillMode = kCAFillModeForwards;
@@ -111,11 +107,7 @@
 {
     [super setPullingProgress:pullingProgress];
     
-    if (self.state != MLRefreshControlStatePulling) {
-        return;
-    }
-    
-    self.circleView.progress = pullingProgress;
+    self.circleView.progress = fmin(pullingProgress, 1.0f);
 }
 
 - (CircleView *)circleView
