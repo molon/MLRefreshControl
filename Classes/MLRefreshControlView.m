@@ -111,6 +111,7 @@
     _animateView = animateView;
     
     [self addSubview:_animateView];
+    
     _animateView.state = state;
     _animateView.pullingProgress = pullingProgress;
     
@@ -195,15 +196,14 @@
 {
     _originalTopInset = originalTopInset;
     
-//    //更新绑定的scrollView相应的东西
-//    if (self.state != MLRefreshControlStateRefreshing) {
-//        //直接更新其contentInset
-//        [self changeScrollViewContentInsetTop:originalTopInset adjustOffset:YES];
-//    }else{
-//        [self refreshContentInsetWhenRefreshing];
-//    }
-//    
-//    [self setNeedsLayout];
+    if (self.state != MLRefreshControlStateRefreshing) {
+        //just update it's contentInsetTop
+        [self changeScrollViewContentInsetTop:originalTopInset adjustOffset:YES];
+    }else{
+        [self refreshContentInsetTopWhenRefreshing];
+    }
+    
+    [self setNeedsLayout];
 }
 
 #pragma mark - KVO
@@ -230,6 +230,9 @@
     
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         self.scrollView = (UIScrollView*)(self.superview);
+        
+        //need to update something of scrollView, so we excute the setOriginalTopInset: method.
+        self.originalTopInset = self.originalTopInset;
         
         //first layout, the view's frame be always set self according to scrollView.
         [self setNeedsLayout];

@@ -20,18 +20,18 @@
 @implementation UIScrollView (MLRefreshControl)
 
 #pragma mark - event
-- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
+- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
 {
-    [self enableRefreshingWithAction:actionBlock style:style scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing animteView:[CircleMLRefreshControlAnimateView new]];
+    [self enableRefreshingWithAction:actionBlock style:style originalTopInset:originalTopInset scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing animteView:[CircleMLRefreshControlAnimateView new]];
 }
 
-- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing animteView:(MLRefreshControlAnimateView*)animateView
+- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing animteView:(MLRefreshControlAnimateView*)animateView
 {
     if (!animateView) {
         animateView = [CircleMLRefreshControlAnimateView new];
         
     }
-    self.refreshView = [[MLRefreshControlView alloc]initWithAction:actionBlock animateView:animateView style:style originalTopInset:self.contentInset.top scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing];
+    self.refreshView = [[MLRefreshControlView alloc]initWithAction:actionBlock animateView:animateView style:style originalTopInset:originalTopInset scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing];
 }
 
 - (void)endRefreshing
@@ -72,7 +72,6 @@ static char lastRefreshTimeKey;
 {
     //Remove old
     if (self.refreshView) {
-        NSAssert(![self isRefreshing],@"The old refreshView is refreshing now, it's terrible!");
         [self endRefreshing];
         [self.refreshView removeFromSuperview];
     }

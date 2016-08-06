@@ -70,8 +70,6 @@ NS_ASSUME_NONNULL_BEGIN
  */
 - (void)beginRefreshing;
 
-- (void)refreshContentInsetTopWhenRefreshing;
-
 @end
 
 NS_ASSUME_NONNULL_END

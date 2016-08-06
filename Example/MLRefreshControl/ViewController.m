@@ -119,23 +119,16 @@
                 __strong __typeof(wSelf)sSelf = wSelf;
                 [sSelf.tableView endRefreshing];
             });
-        } style:MLRefreshControlViewStyleFixed scrollToTopAfterEndRefreshing:YES];
+        } style:MLRefreshControlViewStyleFixed originalTopInset:[self navigationBarBottomY] scrollToTopAfterEndRefreshing:YES];
     }
 }
 
 #pragma mark - helper
 - (void)adjustTableViewContentInset {
-    
-    CGFloat bottomY = [self navigationBarBottomY];
     self.tableView.contentInsetBottom = [self tabBarOccupiedHeight];
-    
-    self.tableView.refreshView.originalTopInset = bottomY;
-    if (![self.tableView isRefreshing]) {
-        self.tableView.contentInsetTop = bottomY;
-    }else{
-        [self.tableView.refreshView refreshContentInsetTopWhenRefreshing];
-    }
-    [self.tableView.refreshView setNeedsLayout];
+    //The setting of contentInsetTop give refreshView to perform when using MLRefreshControl
+    //So we dont need to perform `self.tableView.contentInsetTop = [self navigationBarBottomY]`
+    self.tableView.refreshView.originalTopInset = [self navigationBarBottomY];
 }
 
 #pragma mark - layout
