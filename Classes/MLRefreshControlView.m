@@ -59,13 +59,45 @@
 }
 
 #pragma mark - helper
+- (void)changeScrollViewContentInsetTop:(CGFloat)insetTop adjustOffset:(BOOL)adjustOffset
+{
+    UIEdgeInsets inset = self.scrollView.contentInset;
+    if (inset.top==insetTop) {
+        return;
+    }
+    
+    _ignoreSetContentOffsetForKVO = YES;
+    
+    inset.top = insetTop;
+    
+    CGFloat topOffsetY = self.scrollView.contentInset.top - inset.top;
+    CGPoint offset = self.scrollView.contentOffset;
+    
+    self.scrollView.contentInset = inset;
+    
+    if (adjustOffset) {
+        offset.y += topOffsetY;
+        self.scrollView.contentOffset = offset;
+    }
+    
+    _ignoreSetContentOffsetForKVO = NO;
+}
+
 - (void)changeScrollViewContentInsetTop:(CGFloat)insetTop
 {
-    _ignoreSetContentOffsetForKVO = YES;
-    UIEdgeInsets inset = self.scrollView.contentInset;
-    inset.top = insetTop;
-    self.scrollView.contentInset = inset;
-    _ignoreSetContentOffsetForKVO = NO;
+    [self changeScrollViewContentInsetTop:insetTop adjustOffset:NO];
+}
+
+- (void)refreshContentInsetTopWhenRefreshing
+{
+    //modify contentInset to ensure the section header can reach top
+    CGFloat insetTop;
+    if(self.scrollView.contentOffset.y+self.originalTopInset >= 0){
+        insetTop = self.originalTopInset;
+    }else{
+        insetTop = fmin(-self.scrollView.contentOffset.y,kMLRefreshControlViewHeight+self.originalTopInset);
+    }
+    [self changeScrollViewContentInsetTop:insetTop];
 }
 
 #pragma mark - setter
@@ -152,11 +184,26 @@
     }
 }
 
--(void)setStyle:(MLRefreshControlViewStyle)style
+- (void)setStyle:(MLRefreshControlViewStyle)style
 {
     _style = style;
     
     [self setNeedsLayout];
+}
+
+- (void)setOriginalTopInset:(CGFloat)originalTopInset
+{
+    _originalTopInset = originalTopInset;
+    
+//    //更新绑定的scrollView相应的东西
+//    if (self.state != MLRefreshControlStateRefreshing) {
+//        //直接更新其contentInset
+//        [self changeScrollViewContentInsetTop:originalTopInset adjustOffset:YES];
+//    }else{
+//        [self refreshContentInsetWhenRefreshing];
+//    }
+//    
+//    [self setNeedsLayout];
 }
 
 #pragma mark - KVO
@@ -216,14 +263,7 @@
             }
             
             if (self.state == MLRefreshControlStateRefreshing){
-                //modify contentInset to ensure the section header can reach top
-                CGFloat insetTop;
-                if(self.scrollView.contentOffset.y+self.originalTopInset >= 0){
-                    insetTop = self.originalTopInset;
-                }else{
-                    insetTop = fmin(-self.scrollView.contentOffset.y,kMLRefreshControlViewHeight+self.originalTopInset);
-                }
-                [self changeScrollViewContentInsetTop:insetTop];
+                [self refreshContentInsetTopWhenRefreshing];
                 return;
             }
             

@@ -32,13 +32,13 @@
     }
     
     if (!self.navigationController) {
-        return [UIViewController statusBarHeight];
+        return [UIApplication sharedApplication].statusBarHidden?0.0f:[UIViewController statusBarHeight];
     }else{
         if (!self.navigationController.navigationBar.translucent) {
             return 0.0f;
         }
     }
-    return [UIViewController statusBarHeight] + (self.navigationController.navigationBarHidden ? 0 : self.navigationController.navigationBar.intrinsicContentSize.height);
+    return ([UIApplication sharedApplication].statusBarHidden?0.0f:[UIViewController statusBarHeight]) + (self.navigationController.navigationBarHidden ? 0 : self.navigationController.navigationBar.intrinsicContentSize.height);
 }
 
 - (CGFloat)tabBarOccupiedHeight {
@@ -104,14 +104,13 @@
     [super viewDidLoad];
     self.title = @"MLRefreshControl";
     
-    // Do any additional setup after loading the view, typically from a nib.
-    [self.view addSubview:self.tableView];
-    
     //Dont advise to use `automaticallyAdjustsScrollViewInsets`
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    self.tableView.contentInsetTop = [self navigationBarBottomY];
-    self.tableView.contentInsetBottom = [self tabBarOccupiedHeight];
+    // Do any additional setup after loading the view, typically from a nib.
+    [self.view addSubview:self.tableView];
+    
+    [self adjustTableViewContentInset];
     
     if (!self.tableView.refreshView) {
         __weak __typeof(self)wSelf = self;
@@ -124,11 +123,32 @@
     }
 }
 
+#pragma mark - helper
+- (void)adjustTableViewContentInset {
+    
+    CGFloat bottomY = [self navigationBarBottomY];
+    self.tableView.contentInsetBottom = [self tabBarOccupiedHeight];
+    
+    self.tableView.refreshView.originalTopInset = bottomY;
+    if (![self.tableView isRefreshing]) {
+        self.tableView.contentInsetTop = bottomY;
+    }else{
+        [self.tableView.refreshView refreshContentInsetTopWhenRefreshing];
+    }
+    [self.tableView.refreshView setNeedsLayout];
+}
+
 #pragma mark - layout
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
     self.tableView.frame = self.view.bounds;
+}
+
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration{
+    [super willAnimateRotationToInterfaceOrientation:toInterfaceOrientation duration:duration];
+    
+    [self adjustTableViewContentInset];
 }
 
 #pragma mark - getter
