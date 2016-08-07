@@ -37,11 +37,12 @@
     self = [self init];
     if (self) {
         self.actionBlock = actionBlock;
-        self.originalTopInset = originalTopInset;
         self.scrollToTopAfterEndRefreshing = scrollToTopAfterEndRefreshing;
         
         self.animateView = animateView;
         self.style = style;
+        
+        self.originalTopInset = originalTopInset;
     }
     return self;
 }
@@ -196,11 +197,13 @@
 {
     _originalTopInset = originalTopInset;
     
-    if (self.state != MLRefreshControlStateRefreshing) {
-        //just update it's contentInsetTop
-        [self changeScrollViewContentInsetTop:originalTopInset adjustOffset:YES];
-    }else{
-        [self refreshContentInsetTopWhenRefreshing];
+    if (self.scrollView) {
+        if (self.state != MLRefreshControlStateRefreshing) {
+            //just update it's contentInsetTop
+            [self changeScrollViewContentInsetTop:originalTopInset adjustOffset:YES];
+        }else{
+            [self refreshContentInsetTopWhenRefreshing];
+        }
     }
     
     [self setNeedsLayout];
@@ -217,8 +220,8 @@
         [self.superview removeObserver:self forKeyPath:@"contentOffset" context:nil];
         [self.superview removeObserver:self forKeyPath:@"frame" context:nil];
         
-        self.scrollView = nil;
         _scrollViewPanGesture = nil;
+        self.scrollView = nil;
     }
 }
 
@@ -230,6 +233,12 @@
     
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         self.scrollView = (UIScrollView*)(self.superview);
+        _scrollViewPanGesture = [self.scrollView valueForKey:@"pan"];
+        
+        //add kvo for contentOffset
+        [self.superview addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
+        [self.superview addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
+        [_scrollViewPanGesture addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
         
         //need to update something of scrollView, so we excute the setOriginalTopInset: method.
         self.originalTopInset = self.originalTopInset;
@@ -237,14 +246,6 @@
         //first layout, the view's frame be always set self according to scrollView.
         [self setNeedsLayout];
         [self layoutIfNeeded];
-        
-        _scrollViewPanGesture = [self.scrollView valueForKey:@"pan"];
-        
-        //add kvo for contentOffset
-        [self.superview addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
-        [self.superview addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-        
-        [_scrollViewPanGesture addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
     }
 }
 
