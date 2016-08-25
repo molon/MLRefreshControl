@@ -27,6 +27,9 @@
 
 - (void)setProgress:(float)progress
 {
+    if (progress==_progress) {
+        return;
+    }
     _progress = progress;
     
     [self setNeedsDisplay];
