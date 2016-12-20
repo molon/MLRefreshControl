@@ -28,8 +28,6 @@
      Because some behavior will affect contentOffset(Like changing contentInset)
      */
     BOOL _ignoreSetContentOffsetForKVO;
-    
-    __weak UIPanGestureRecognizer *_scrollViewPanGesture;
 }
 
 - (id)initWithAction:(MLRefreshControlActionBlock)actionBlock animateView:(MLRefreshControlAnimateView*)animateView style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
@@ -216,11 +214,10 @@
     
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         //remove kvo
-        [_scrollViewPanGesture removeObserver:self forKeyPath:@"state" context:nil];
+        [((UIScrollView*)(self.superview)).panGestureRecognizer removeObserver:self forKeyPath:@"state" context:nil];
         [self.superview removeObserver:self forKeyPath:@"contentOffset" context:nil];
         [self.superview removeObserver:self forKeyPath:@"frame" context:nil];
         
-        _scrollViewPanGesture = nil;
         self.scrollView = nil;
     }
 }
@@ -233,12 +230,11 @@
     
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         self.scrollView = (UIScrollView*)(self.superview);
-        _scrollViewPanGesture = [self.scrollView valueForKey:@"pan"];
         
         //add kvo for contentOffset
         [self.superview addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
         [self.superview addObserver:self forKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew context:nil];
-        [_scrollViewPanGesture addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
+        [((UIScrollView*)(self.superview)).panGestureRecognizer addObserver:self forKeyPath:@"state" options:NSKeyValueObservingOptionNew context:nil];
         
         //need to update something of scrollView, so we excute the setOriginalTopInset: method.
         self.originalTopInset = self.originalTopInset;
@@ -295,7 +291,7 @@
         return;
     }
     
-    if ([object isEqual:_scrollViewPanGesture]&&[@"state" isEqualToString:keyPath]) {
+    if ([object isEqual:_scrollView.panGestureRecognizer]&&[@"state" isEqualToString:keyPath]) {
         //check whether stopping drag
         UIGestureRecognizerState new = [[change objectForKey:NSKeyValueChangeNewKey]integerValue];
         if (new==UIGestureRecognizerStateEnded||new==UIGestureRecognizerStateCancelled||new==UIGestureRecognizerStateFailed) {
