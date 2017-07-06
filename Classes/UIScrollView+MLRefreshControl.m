@@ -20,18 +20,22 @@
 @implementation UIScrollView (MLRefreshControl)
 
 #pragma mark - event
-- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
+- (void)enableRefreshControlWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing
 {
-    [self enableRefreshingWithAction:actionBlock style:style originalTopInset:originalTopInset scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing animteView:[CircleMLRefreshControlAnimateView new]];
+    [self enableRefreshControlWithAction:actionBlock style:style originalTopInset:originalTopInset scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing animteView:[CircleMLRefreshControlAnimateView new]];
 }
 
-- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing animteView:(MLRefreshControlAnimateView*)animateView
+- (void)enableRefreshControlWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing animteView:(MLRefreshControlAnimateView*)animateView
 {
     if (!animateView) {
         animateView = [CircleMLRefreshControlAnimateView new];
         
     }
     self.refreshView = [[MLRefreshControlView alloc]initWithAction:actionBlock animateView:animateView style:style originalTopInset:originalTopInset scrollToTopAfterEndRefreshing:scrollToTopAfterEndRefreshing];
+}
+
+- (void)invalidateRefreshControl {
+    self.refreshView = nil;
 }
 
 - (void)endRefreshing

@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
  @param originalTopInset               the top of contentInset when scrollview is not refreshing
  @param scrollToTopAfterEndRefreshing whether auto scroll to top after refreshing completed
  */
-- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing;
+- (void)enableRefreshControlWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing;
 
 /**
  Enable MLRefreshControl support for scrollView
@@ -53,7 +53,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param scrollToTopAfterEndRefreshing whether auto scroll to top after refreshing completed
  @param animateView                   animateView
  */
-- (void)enableRefreshingWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing animteView:(MLRefreshControlAnimateView*)animateView;
+- (void)enableRefreshControlWithAction:(MLRefreshControlActionBlock)actionBlock style:(MLRefreshControlViewStyle)style originalTopInset:(CGFloat)originalTopInset scrollToTopAfterEndRefreshing:(BOOL)scrollToTopAfterEndRefreshing animteView:(MLRefreshControlAnimateView*)animateView;
+
+/*!
+ @brief invalidate refresh control
+ */
+- (void)invalidateRefreshControl;
 
 /**
  End refreshing, please tell the control manually.
