@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 s.name         = "MLRefreshControl"
-s.version      = "1.0.2"
+s.version      = "1.1.0"
 s.summary      = "Pull down to refresh"
 
 s.homepage     = 'https://github.com/molon/MLRefreshControl'
